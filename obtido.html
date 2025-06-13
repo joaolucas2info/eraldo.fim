@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Obrigado pela sua compra!</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #1a1a1a; /* preto escuro */
+      color: #f2f2f2; /* quase branco */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    .container {
+      background-color: #2e2e2e; /* cinza escuro */
+      padding: 40px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+      max-width: 500px;
+      width: 100%;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s forwards;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #ffffff;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+      animation-delay: 0.5s; /* atraso para o título */
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #cccccc;
+      margin-bottom: 30px;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+      animation-delay: 1s; /* atraso para a mensagem */
+    }
+
+    .button {
+      padding: 12px 30px;
+      font-size: 1em;
+      color: #1a1a1a;
+      background-color: #f2f2f2;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+      text-decoration: none;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+      animation-delay: 1.5s; /* atraso para o botão */
+    }
+
+    .button:hover {
+      background-color: #d9d9d9;
+      transform: translateY(-4px);
+    }
+
+    /* Animação de fade-in */
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Animação de fade-in e deslizamento para cima */
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Obrigado pela sua compra!</h1>
+    <p>Seu pedido foi recebido com sucesso. Em breve você receberá todas as informações por e-mail.</p>
+    <a href="lfc2.html" class="button">Voltar para a loja</a>
+  </div>
+</body>
+</html>

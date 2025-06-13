@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="utf-8" />
+  <title>LFC-Imports</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="C:\Users\202310210027\Desktop\projet\Projeto.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Courier New', monospace;
+      background-color: #ffffff;
+      color: #000000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .faixa-preta {
+      background-color: #000000;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 36px;
+      font-weight: bold;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background-color: #000;
+      padding: 15px 0;
+      width: 100%;
+      position: fixed;
+      top: 80px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #333;
+    }
+
+    .intro {
+      font-size: 28px;
+      margin-top: 150px;
+    }
+
+    .produto {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 40px 0;
+    }
+
+    .produto img {
+      width: 200px;
+      height: 200px;
+      border-radius: 10px;
+      border: 3px solid black;
+    }
+
+    /* Preço do produto */
+    .preco {
+      margin-top: 10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .btn-comprar {
+      margin-top: 20px;
+      background-color: #000000;
+      color: white;
+      font-size: 18px;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    }
+
+    .btn-comprar:hover {
+      transform: scale(1.1);
+      background-color: #444;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="faixa-preta">
+    LFC Imports
+  </div>
+
+  <nav>
+    <a href="hist.html" class="central2">Sobre a loja</a>
+    <a href="furmu.html" class="central3">Cadastre-se</a>
+  </nav>
+
+  <div class="intro">
+    Seja muito bem-vindo à nossa loja!
+  </div>
+
+  <div class="produto">
+    <img src="imagens/bone2.jpg" alt="Boné 2">
+    <div class="preco">Preço: R$ 119,90</div>
+    <button class="btn-comprar" onclick="window.location.href='furmu.html'">Comprar Agora</button>
+  </div>
+
+</body>
+
+</html>
