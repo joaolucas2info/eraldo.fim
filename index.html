@@ -1,117 +1,134 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8" />
+  <title>LFC-Imports</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="C:\Users\202310210027\Desktop\projet\Projeto.css" rel="stylesheet" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sobre</title>
+
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
 
     body {
+      margin: 0;
+      padding: 0;
       font-family: 'Courier New', monospace;
+      background-color: #ffffff;
+      color: #000000;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      flex-direction: column;
+      text-align: center;
+    }
+
+    .faixa-preta {
+      background-color: #000000;
+      color: white;
       padding: 20px;
       text-align: center;
-    }
-
-    .container {
+      font-size: 36px;
+      font-weight: bold;
       width: 100%;
-      max-width: 800px; /* Limita a largura do conteúdo para telas grandes */
+      position: fixed;
+      top: 0;
+      z-index: 1000;
     }
 
-    .voltar {
-      color: rgb(255, 255, 255);
-      background-color: #000000;
-      text-align: center;
-      padding: 15px;
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background-color: #000;
+      padding: 15px 0;
+      width: 100%;
+      position: fixed;
+      top: 80px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #333;
+    }
+
+    .intro {
+      font-size: 28px;
+      margin-top: 150px;
+    }
+
+    .produto {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 40px 0;
+    }
+
+    .produto img {
+      width: 200px;
+      height: 200px;
       border-radius: 10px;
+      border: 3px solid black;
+    }
+
+    /* Preço do produto */
+    .preco {
+      margin-top: 10px;
       font-size: 20px;
       font-weight: bold;
-      text-decoration: none;
-      width: 200px; /* Largura fixa */
-      margin: 20px auto; /* Centraliza o botão */
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
-    .texto-lerdao {
-      font-size: 16px;
-      color: #444;
-      text-align: center;
-      margin: 30px auto;
-      line-height: 1.7;
-      padding: 10px 20px;
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeSlideUp 1.2s ease forwards 0.6s;
-      background: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    .btn-comprar {
+      margin-top: 20px;
+      background-color: #000000;
+      color: white;
+      font-size: 18px;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
     }
 
-    @keyframes fadeSlideUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Para telas menores que 600px */
-    @media (max-width: 600px) {
-      .voltar {
-        width: 80%; /* Ajusta a largura para 80% da tela */
-        font-size: 18px;
-        padding: 12px;
-      }
-
-      .texto-lerdao {
-        font-size: 14px;
-        max-width: 100%;
-        padding: 15px;
-      }
-    }
-
-    /* Para telas menores que 400px */
-    @media (max-width: 400px) {
-      .voltar {
-        width: 90%; /* Ajusta ainda mais a largura */
-        font-size: 16px;
-        padding: 10px;
-      }
-
-      .texto-lerdao {
-        font-size: 13px;
-        padding: 10px;
-      }
+    .btn-comprar:hover {
+      transform: scale(1.1);
+      background-color: #444;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <a href="index.html" class="voltar">Voltar</a>
 
-    <div class="texto-lerdao">
-      <p>
-        A inspiração para essa loja nasceu da paixão de um grande amigo nosso: o <strong>Lerdão</strong>.
-        Há mais de dois anos, ele vem todos os dias para a escola usando seu inseparável boné —
-        um verdadeiro companheiro de estilo.
-      </p>
-      <p>
-        Essa presença constante despertou em nós a ideia de transformar esse hábito em algo maior:
-        uma <strong>loja exclusiva</strong>, criada para compartilhar com o mundo os bonés únicos
-        que fazem parte da sua identidade.
-      </p>
-    </div>
+  <div class="faixa-preta">
+    LFC Imports
   </div>
+
+  <nav>
+    <a href="hist.html" class="central2">Sobre a loja</a>
+    <a href="furmu.html" class="central3">Cadastre-se</a>
+  </nav>
+
+  <div class="intro">
+    Seja muito bem-vindo à nossa loja!
+  </div>
+
+  <div class="produto">
+    <img src="imagens/bone2.jpg" alt="Boné 2">
+    <div class="preco">Preço: R$ 119,90</div>
+    <button class="btn-comprar" onclick="window.location.href='furmu.html'">Comprar Agora</button>
+  </div>
+
 </body>
 
 </html>
