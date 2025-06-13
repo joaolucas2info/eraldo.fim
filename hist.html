@@ -15,15 +15,23 @@
     body {
       font-family: 'Courier New', monospace;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       flex-direction: column;
+      justify-content: space-between; /* Isso vai separar o conteúdo e o botão */
+      height: 100vh; /* Altura da tela */
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      flex-grow: 1; /* Faz com que o conteúdo ocupe o espaço restante */
     }
 
     .voltar {
-      width: 100%;
-      max-width: 140px;
       color: rgb(255, 255, 255);
       background-color: #000000;
       text-align: center;
@@ -32,8 +40,9 @@
       font-size: 20px;
       font-weight: bold;
       text-decoration: none;
+      width: 200px; /* Largura fixa */
+      margin: 20px auto; /* Centraliza o botão */
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      margin-top: 30px;
     }
 
     .texto-lerdao {
@@ -59,9 +68,10 @@
       }
     }
 
+    /* Para telas menores que 600px */
     @media (max-width: 600px) {
       .voltar {
-        width: 80%;
+        width: 80%; /* Ajusta a largura para 80% da tela */
         font-size: 18px;
         padding: 12px;
       }
@@ -73,9 +83,10 @@
       }
     }
 
+    /* Para telas menores que 400px */
     @media (max-width: 400px) {
       .voltar {
-        width: 90%;
+        width: 90%; /* Ajusta ainda mais a largura */
         font-size: 16px;
         padding: 10px;
       }
@@ -89,20 +100,22 @@
 </head>
 
 <body>
-  <a href="index.html" class="voltar">Voltar</a>
-
-  <div class="texto-lerdao">
-    <p>
-      A inspiração para essa loja nasceu da paixão de um grande amigo nosso: o <strong>Lerdão</strong>.
-      Há mais de dois anos, ele vem todos os dias para a escola usando seu inseparável boné —
-      um verdadeiro companheiro de estilo.
-    </p>
-    <p>
-      Essa presença constante despertou em nós a ideia de transformar esse hábito em algo maior:
-      uma <strong>loja exclusiva</strong>, criada para compartilhar com o mundo os bonés únicos
-      que fazem parte da sua identidade.
-    </p>
+  <div class="container">
+    <div class="texto-lerdao">
+      <p>
+        A inspiração para essa loja nasceu da paixão de um grande amigo nosso: o <strong>Lerdão</strong>.
+        Há mais de dois anos, ele vem todos os dias para a escola usando seu inseparável boné —
+        um verdadeiro companheiro de estilo.
+      </p>
+      <p>
+        Essa presença constante despertou em nós a ideia de transformar esse hábito em algo maior:
+        uma <strong>loja exclusiva</strong>, criada para compartilhar com o mundo os bonés únicos
+        que fazem parte da sua identidade.
+      </p>
+    </div>
   </div>
+
+  <a href="index.html" class="voltar">Voltar</a>
 </body>
 
 </html>
