@@ -30,30 +30,6 @@
       flex-grow: 1; /* Faz o conteúdo crescer e ocupar o espaço disponível */
     }
 
-    .voltar {
-      padding: 10px 20px;
-      background-color: #333;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 25px;
-      font-size: 16px;
-      width: 200px;
-      text-align: center;
-      margin: 20px auto;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      transition: background-color 0.3s ease;
-      position: fixed;
-      bottom: 20px; /* Coloca o botão sempre na parte inferior */
-      left: 50%;
-      transform: translateX(-50%); /* Centraliza o botão */
-      opacity: 0;
-      animation: fadeIn 1s ease forwards 0.5s;
-    }
-
-    .voltar:hover {
-      background-color: #555;
-    }
-
     .bone2 {
       display: block;
       width: 300px;
@@ -172,12 +148,6 @@
 
     /* Ajustes para dispositivos móveis */
     @media (max-width: 600px) {
-      .voltar {
-        font-size: 14px;
-        padding: 8px 15px;
-        width: 80%;
-      }
-
       .bone2 {
         width: 250px;
         height: 250px;
@@ -203,14 +173,17 @@
         font-size: 16px;
         padding: 12px 25px;
       }
+
+      .voltar {
+        font-size: 14px;
+        padding: 8px 15px;
+        width: 80%;
+      }
     }
   </style>
 </head>
 
 <body>
-
-  <!-- Botão "Voltar" -->
-  <a href="lfc2.html" class="voltar">Voltar</a>
 
   <div class="container">
     <div class="bone2">
@@ -228,6 +201,9 @@
     </div>
 
     <button id="obterBtn">Obter Produto</button>
+
+    <!-- Botão "Voltar" abaixo do botão "Obter Produto" -->
+    <a href="lfc2.html" class="voltar">Voltar</a>
 
     <div id="loading">
       Quase lá<span class="dots"></span>
