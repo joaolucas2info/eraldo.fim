@@ -116,6 +116,7 @@
       font-weight: 500;
       letter-spacing: 0.5px;
       transition: background-color 0.2s, transform 0.1s;
+      margin-top: 10px;
     }
 
     button:hover {
@@ -124,6 +125,15 @@
 
     button:active {
       transform: scale(0.98);
+    }
+
+    /* Botão Voltar separado */
+    .btn-voltar {
+      background-color: #444;
+    }
+
+    .btn-voltar:hover {
+      background-color: #666;
     }
 
     @media (max-width: 480px) {
@@ -152,6 +162,8 @@
       <div id="mensagem-error" class="error-message"></div>
 
       <button type="submit">Enviar</button>
+<button type="button" class="btn-voltar" onclick="window.location.href='lfc2.html'">Voltar</button>
+      
     </form>
   </div>
 
