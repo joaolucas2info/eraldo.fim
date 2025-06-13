@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Boné Exclusivo - Lerdão</title>
 
-
   <style>
     * {
       margin: 0;
@@ -18,8 +17,21 @@
       background-color: #f9f9f9;
       color: #333;
       line-height: 1.6;
-      padding: 40px;
-      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /* Distribui conteúdo no topo e botão no fundo */
+      height: 100vh; /* Altura total da tela */
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+      flex-grow: 1; /* Faz o conteúdo crescer e ocupar o espaço disponível */
+      animation: slideFadeIn 1.2s ease forwards;
+      opacity: 0;
+      transform: translateY(30px);
     }
 
     .voltar {
@@ -29,9 +41,10 @@
       text-decoration: none;
       border-radius: 25px;
       font-size: 16px;
-      position: absolute;
-      top: 20px;
-      left: 20px;
+      width: 200px;
+      text-align: center;
+      margin: 20px auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       transition: background-color 0.3s ease;
       opacity: 0;
       animation: fadeIn 1s ease forwards 0.5s;
@@ -39,22 +52,6 @@
 
     .voltar:hover {
       background-color: #555;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      text-align: center;
-      animation: slideFadeIn 1.2s ease forwards;
-      opacity: 0;
-      transform: translateY(30px);
-    }
-
-    @keyframes slideFadeIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
 
     .bone2 {
@@ -172,10 +169,47 @@
       from { opacity: 1; }
       to { opacity: 0; transform: scale(0.95); }
     }
+
+    /* Ajustes para dispositivos móveis */
+    @media (max-width: 600px) {
+      .voltar {
+        font-size: 14px;
+        padding: 8px 15px;
+        width: 80%;
+      }
+
+      .bone2 {
+        width: 250px;
+        height: 250px;
+      }
+
+      .container {
+        padding: 0 10px;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      .texto {
+        font-size: 14px;
+      }
+
+      .preco {
+        font-size: 24px;
+      }
+
+      #obterBtn {
+        font-size: 16px;
+        padding: 12px 25px;
+      }
+    }
   </style>
 </head>
+
 <body>
 
+  <!-- Botão "Voltar" -->
   <a href="lfc2.html" class="voltar">Voltar</a>
 
   <div class="container">
