@@ -17,11 +17,10 @@
       background-color: #f9f9f9;
       color: #333;
       line-height: 1.6;
+      padding: 20px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between; /* Distribui conteúdo no topo e botão no fundo */
-      height: 100vh; /* Altura total da tela */
-      padding: 20px;
+      min-height: 100vh;
     }
 
     .container {
@@ -29,9 +28,6 @@
       margin: 0 auto;
       text-align: center;
       flex-grow: 1; /* Faz o conteúdo crescer e ocupar o espaço disponível */
-      animation: slideFadeIn 1.2s ease forwards;
-      opacity: 0;
-      transform: translateY(30px);
     }
 
     .voltar {
@@ -46,6 +42,10 @@
       margin: 20px auto;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       transition: background-color 0.3s ease;
+      position: fixed;
+      bottom: 20px; /* Coloca o botão sempre na parte inferior */
+      left: 50%;
+      transform: translateX(-50%); /* Centraliza o botão */
       opacity: 0;
       animation: fadeIn 1s ease forwards 0.5s;
     }
